@@ -1,0 +1,23 @@
+<h2 class="text-uppercase text-center mb-5">Create an account</h2>
+<%= form_with url: log_in_path do |f| %>
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-info">
+      <%= msg %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class: "form-control", placeholder: "example@example.com" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password, class: "form-control" %>
+    <br>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>

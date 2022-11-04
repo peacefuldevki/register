@@ -30,27 +30,35 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
-
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
+gem "haml-rails"
+# Bootstrap
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 
-# Use Sass to process CSS
-# gem "sassc-rails"
-
-# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem 'activesupport'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "rubocop"
+  gem "rubocop-rails"
+  gem "rubocop-rspec"
+  gem 'rubocop-performance', '1.14.2'
+  gem 'rubocop-thread_safety', '0.3.4'
+  gem "pry"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem 'shoulda-matchers', '~> 3.0'
+  gem 'rails-controller-testing'
 end
 
 group :development do

@@ -1,0 +1,11 @@
+<div>
+  <% if @user.present? %>
+    <h2 class="text-uppercase text-center mb-5">Welcome</h2>
+    You are logged in as <%= @user.email %>
+    <%= button_to 'Log out', log_out_path, method: :delete %>
+    <% else %>
+    <h2 class="text-uppercase text-center mb-5">Please sign up or log in in order to access this page</h2>
+    <%= link_to '<button type="button">Sign Up</button>'.html_safe, sign_up_path %>
+    <%= link_to '<button type="button">Log in</button>'.html_safe, log_in_path %>
+  <% end %>
+</div>
