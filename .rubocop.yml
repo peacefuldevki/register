@@ -1,0 +1,1440 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+  - rubocop-thread_safety
+
+AllCops:
+  TargetRubyVersion: 3.1
+  # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
+  # to ignore them, so only the ones explicitly set in this file are enabled.
+  DisabledByDefault: true
+  SuggestExtensions: false
+
+RSpec/UnspecifiedException:
+  Enabled: true
+  Severity: error
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+  Severity: error
+
+Rails/ApplicationController:
+  Enabled: true
+  Severity: error
+
+Rails/RakeEnvironment:
+  Enabled: true
+  Severity: error
+
+Rails/SafeNavigationWithBlank:
+  Enabled: true
+  Severity: error
+Rails/ApplicationMailer:
+  Enabled: true
+  Severity: error
+
+Lint/DuplicateRequire:
+  Enabled: true
+  Severity: warning
+
+Lint/UselessMethodDefinition:
+  Enabled: true
+  Severity: error
+
+Lint/EmptyFile:
+  Enabled: true
+  Severity: error
+
+Lint/DuplicateRescueException:
+  Enabled: true
+  Severity: warning
+
+Lint/IdentityComparison:
+  Enabled: true
+  Severity: warning
+
+Lint/ConstantDefinitionInBlock:
+  Enabled: true
+  Severity: warning
+
+Lint/NonDeterministicRequireOrder:
+  Enabled: true
+  Severity: error
+
+Style/RedundantSelfAssignment:
+  Enabled: true
+  Severity: warning
+
+Style/HashTransformKeys:
+  Enabled: true
+  Severity: error
+
+Style/HashTransformValues:
+  Enabled: true
+  Severity: error
+
+Rails/IndexWith:
+  Enabled: true
+  Severity: error
+
+Rails/IndexBy:
+  Enabled: true
+  Severity: error
+
+Style/HashEachMethods:
+  Enabled: true
+  Severity: error
+
+Rails/EnumHash:
+  Enabled: true
+  Severity: error
+
+Lint/SendWithMixinArgument:
+  Enabled: true
+  Severity: error
+
+Style/MultilineWhenThen:
+  Enabled: true
+  Severity: error
+
+Lint/StructNewOverride:
+  Enabled: true
+  Severity: error
+
+Style/TrailingCommaInBlockArgs:
+  Enabled: true
+  Severity: error
+
+Lint/RaiseException:
+  Enabled: true
+  Severity: error
+
+Performance/OpenStruct:
+  Enabled: true
+  Severity: error
+  Exclude:
+  - 'spec/**/*'
+
+Performance/Caller:
+  Enabled: true
+  Severity: error
+
+Performance/CaseWhenSplat:
+  Enabled: true
+  Severity: error
+
+Performance/Casecmp:
+  Enabled: true
+  Severity: error
+
+ThreadSafety:
+  Enabled: true
+  Severity: error
+
+# to be reenabled once codeclimate releases 0.59 channel
+Performance/ChainArrayAllocation:
+  Enabled: true
+  Severity: error
+
+Performance/CompareWithBlock:
+  Enabled: true
+  Severity: error
+
+Performance/Count:
+  Enabled: true
+  Severity: error
+
+Performance/Detect:
+  Enabled: true
+  Severity: error
+
+Performance/DoubleStartEndWith:
+  Enabled: true
+  Severity: error
+
+Performance/EndWith:
+  Enabled: true
+  Severity: error
+
+Performance/FixedSize:
+  Enabled: true
+  Severity: error
+
+Performance/FlatMap:
+  Enabled: true
+  Severity: error
+
+Performance/InefficientHashSearch:
+  Enabled: true
+  Severity: error
+
+Style/Strip:
+  Enabled: true
+  Severity: error
+
+Performance/RangeInclude:
+  Enabled: true
+  Severity: error
+
+Performance/RedundantBlockCall:
+  Enabled: true
+  Severity: error
+
+Performance/RedundantMatch:
+  Enabled: true
+  Severity: error
+
+Performance/RedundantMerge:
+  Enabled: true
+  Severity: error
+
+Style/RedundantSortBy:
+  Enabled: true
+  Severity: error
+
+Performance/RegexpMatch:
+  Enabled: true
+  Severity: error
+
+Performance/ReverseEach:
+  Enabled: true
+  Severity: error
+
+Style/Sample:
+  Enabled: true
+  Severity: error
+
+Performance/Size:
+  Enabled: true
+  Severity: error
+
+Performance/StartWith:
+  Enabled: true
+  Severity: error
+
+Performance/StringReplacement:
+  Enabled: true
+  Severity: error
+
+Performance/TimesMap:
+  Enabled: true
+  Severity: error
+
+Performance/UnfreezeString:
+  Enabled: true
+  Severity: error
+
+Style/RedundantSort:
+  Enabled: true
+  Severity: error
+
+Performance/UriDefaultParser:
+  Enabled: true
+  Severity: error
+
+Naming/AccessorMethodName:
+  Enabled: true
+  Severity: error
+
+Naming/AsciiIdentifiers:
+  Enabled: true
+  Severity: error
+
+Naming/BinaryOperatorParameterName:
+  Enabled: true
+  Severity: error
+
+Naming/ClassAndModuleCamelCase:
+  Enabled: true
+  Severity: error
+
+Naming/ConstantName:
+  Enabled: true
+  Severity: error
+
+Naming/FileName:
+  Enabled: true
+  Severity: error
+
+Naming/HeredocDelimiterCase:
+  Enabled: true
+  Severity: error
+
+Naming/HeredocDelimiterNaming:
+  Enabled: true
+  Severity: error
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: true
+  Severity: error
+
+Naming/MethodName:
+  Enabled: true
+  Severity: error
+
+Naming/PredicateName:
+  Enabled: true
+  Severity: error
+
+Naming/BlockParameterName:
+  Enabled: true
+  Severity: error
+
+Naming/MethodParameterName:
+  Enabled: true
+  Severity: error
+
+Naming/VariableName:
+  Enabled: true
+  Severity: error
+
+Naming/VariableNumber:
+  Enabled: true
+  Severity: error
+
+Lint/DisjunctiveAssignmentInConstructor:
+  Enabled: true
+  Severity: error
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: true
+  Severity: error
+  Exclude:
+    - 'spec/**/*'
+
+Lint/AmbiguousOperator:
+  Enabled: true
+  Severity: error
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: true
+  Severity: error
+
+Lint/AssignmentInCondition:
+  Enabled: true
+  Severity: error
+
+Lint/BigDecimalNew:
+  Enabled: true
+  Severity: error
+
+Lint/BooleanSymbol:
+  Enabled: true
+  Severity: error
+
+Lint/CircularArgumentReference:
+  Enabled: true
+  Severity: error
+
+Lint/Debugger:
+  Enabled: true
+  Severity: error
+
+Lint/DeprecatedClassMethods:
+  Enabled: true
+  Severity: error
+
+Lint/DuplicateCaseCondition:
+  Enabled: true
+  Severity: error
+
+Lint/DuplicateMethods:
+  Enabled: true
+  Severity: error
+
+Lint/DuplicateHashKey:
+  Enabled: true
+  Severity: error
+
+Lint/EachWithObjectArgument:
+  Enabled: true
+  Severity: error
+
+Lint/ElseLayout:
+  Enabled: true
+  Severity: error
+
+Lint/EmptyEnsure:
+  Enabled: true
+  Severity: error
+
+Lint/EmptyExpression:
+  Enabled: true
+  Severity: error
+
+Lint/EmptyInterpolation:
+  Enabled: true
+  Severity: error
+
+Lint/EmptyWhen:
+  Enabled: true
+  Severity: error
+
+Style/EndBlock:
+  Enabled: true
+  Severity: error
+
+Lint/EnsureReturn:
+  Enabled: true
+  Severity: error
+
+Lint/FloatOutOfRange:
+  Enabled: true
+  Severity: error
+
+Lint/FormatParameterMismatch:
+  Enabled: true
+  Severity: error
+
+Lint/SuppressedException:
+  Enabled: true
+  Severity: error
+
+Lint/ImplicitStringConcatenation:
+  Enabled: true
+  Severity: error
+
+Lint/IneffectiveAccessModifier:
+  Enabled: true
+  Severity: error
+
+Lint/InheritException:
+  Enabled: true
+  Severity: error
+
+Lint/InterpolationCheck:
+  Enabled: true
+  Severity: error
+
+Lint/LiteralAsCondition:
+  Enabled: true
+  Severity: error
+
+Lint/LiteralInInterpolation:
+  Enabled: true
+  Severity: error
+
+Lint/Loop:
+  Enabled: true
+  Severity: error
+
+Lint/MissingCopEnableDirective:
+  Enabled: true
+  Severity: error
+
+Lint/MultipleComparison:
+  Enabled: true
+  Severity: error
+
+Lint/NestedMethodDefinition:
+  Enabled: true
+  Severity: error
+
+Lint/NestedPercentLiteral:
+  Enabled: true
+  Severity: error
+
+Lint/NextWithoutAccumulator:
+  Enabled: true
+  Severity: error
+
+Lint/NonLocalExitFromIterator:
+  Enabled: true
+  Severity: error
+
+Lint/NumberConversion:
+  Enabled: true
+  Severity: error
+
+Lint/OrderedMagicComments:
+  Enabled: true
+  Severity: error
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: true
+  Severity: error
+
+Lint/PercentStringArray:
+  Enabled: true
+  Severity: error
+
+Lint/PercentSymbolArray:
+  Enabled: true
+  Severity: error
+
+Lint/RandOne:
+  Enabled: true
+  Severity: error
+
+Lint/RedundantWithIndex:
+  Enabled: true
+  Severity: error
+
+Lint/RedundantWithObject:
+  Enabled: true
+  Severity: error
+
+Lint/RegexpAsCondition:
+  Enabled: true
+  Severity: error
+
+Lint/RequireParentheses:
+  Enabled: true
+  Severity: error
+
+Lint/RescueException:
+  Enabled: true
+  Severity: error
+
+Lint/RescueType:
+  Enabled: true
+  Severity: error
+
+Lint/ReturnInVoidContext:
+  Enabled: true
+  Severity: error
+
+Lint/SafeNavigationChain:
+  Enabled: true
+  Severity: error
+
+Lint/SafeNavigationConsistency:
+  Enabled: true
+  Severity: error
+
+Lint/ScriptPermission:
+  Enabled: true
+  Severity: error
+
+Lint/ShadowedArgument:
+  Enabled: true
+  Severity: error
+
+Lint/ShadowedException:
+  Enabled: true
+  Severity: error
+
+Lint/ShadowingOuterLocalVariable:
+  Enabled: true
+  Severity: error
+
+Lint/RedundantStringCoercion:
+  Enabled: true
+  Severity: error
+
+Lint/UnderscorePrefixedVariableName:
+  Enabled: true
+  Severity: error
+
+Lint/UnifiedInteger:
+  Enabled: true
+  Severity: error
+
+Lint/RedundantCopDisableDirective:
+  Enabled: true
+  Severity: error
+
+Lint/RedundantCopEnableDirective:
+  Enabled: true
+  Severity: error
+
+Lint/RedundantRequireStatement:
+  Enabled: true
+  Severity: error
+
+Lint/RedundantSplatExpansion:
+  Enabled: true
+  Severity: error
+
+Lint/UnreachableCode:
+  Enabled: true
+  Severity: error
+
+Lint/UnusedBlockArgument:
+  Enabled: true
+  Severity: error
+
+Lint/UnusedMethodArgument:
+  Enabled: true
+  Severity: error
+
+Lint/UriEscapeUnescape:
+  Enabled: true
+  Severity: error
+
+Lint/UriRegexp:
+  Enabled: true
+  Severity: error
+
+Lint/UselessAccessModifier:
+  Enabled: true
+  Severity: error
+
+Lint/UselessAssignment:
+  Enabled: true
+  Severity: error
+
+Lint/UnreachableLoop:
+  Enabled: true
+  Severity: error
+
+Lint/OutOfRangeRegexpRef:
+  Enabled: true
+  Severity: warning
+
+Lint/EmptyConditionalBody:
+  Enabled: true
+  Severity: warning
+
+Lint/BinaryOperatorWithIdenticalOperands:
+  Enabled: true
+  Severity: error
+
+Lint/UselessSetterCall:
+  Enabled: true
+  Severity: error
+
+Lint/Void:
+  Enabled: true
+  Severity: error
+
+Metrics/ParameterLists:
+  Enabled: true
+  Severity: error
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Severity: error
+
+Rails/ActiveRecordOverride:
+  Enabled: true
+  Severity: error
+
+Rails/RedundantAllowNil:
+  Enabled: true
+  Severity: error
+
+Naming/RescuedExceptionsVariableName:
+  Enabled: true
+  Severity: error
+Rails/ActionFilter:
+  Enabled: true
+  Severity: error
+
+Rails/ActiveRecordAliases:
+  Enabled: true
+  Severity: error
+
+Rails/ActiveSupportAliases:
+  Enabled: true
+  Severity: error
+
+Rails/ApplicationJob:
+  Enabled: true
+  Severity: error
+
+Rails/ApplicationRecord:
+  Enabled: true
+  Severity: error
+
+Rails/Blank:
+  Enabled: true
+  Severity: error
+
+Rails/BulkChangeTable:
+  Enabled: true
+  Severity: error
+
+Rails/CreateTableWithTimestamps:
+  Enabled: true
+  Severity: error
+
+Rails/Date:
+  Enabled: true
+  Severity: error
+
+Rails/Delegate:
+  Enabled: true
+  Severity: error
+
+Rails/DelegateAllowBlank:
+  Enabled: true
+  Severity: error
+
+Rails/DynamicFindBy:
+  Enabled: true
+  Severity: error
+
+Rails/EnumUniqueness:
+  Enabled: true
+  Severity: error
+
+Rails/EnvironmentComparison:
+  Enabled: true
+  Severity: error
+
+Rails/Exit:
+  Enabled: true
+  Severity: error
+
+Rails/FilePath:
+  Enabled: true
+  Severity: error
+
+Rails/FindBy:
+  Enabled: true
+  Severity: error
+
+Rails/FindEach:
+  Enabled: true
+  Severity: error
+
+Rails/HasAndBelongsToMany:
+  Enabled: true
+  Severity: error
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: true
+  Severity: error
+
+Rails/HttpPositionalArguments:
+  Enabled: true
+  Severity: error
+
+Rails/HttpStatus:
+  Enabled: true
+  Severity: error
+
+Rails/InverseOf:
+  Enabled: true
+  Severity: error
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: true
+  Severity: error
+
+Rails/NotNullColumn:
+  Enabled: true
+  Severity: error
+
+Rails/Output:
+  Enabled: true
+  Severity: error
+
+Rails/OutputSafety:
+  Enabled: true
+  Severity: error
+
+Rails/Presence:
+  Enabled: true
+  Severity: error
+
+Rails/Present:
+  Enabled: true
+  Severity: error
+
+Rails/ReadWriteAttribute:
+  Enabled: true
+  Severity: error
+
+Rails/RedundantReceiverInWithOptions:
+  Enabled: true
+  Severity: error
+
+Rails/RelativeDateConstant:
+  Enabled: true
+  Severity: error
+
+Rails/RequestReferer:
+  Enabled: true
+  Severity: error
+
+Rails/ReversibleMigration:
+  Enabled: true
+  Severity: error
+
+Rails/SafeNavigation:
+  Enabled: true
+  Severity: error
+
+Rails/SaveBang:
+  Enabled: true
+  Severity: error
+
+Rails/ScopeArgs:
+  Enabled: true
+  Severity: error
+
+Rails/SkipsModelValidations:
+  Enabled: true
+  Severity: error
+
+Rails/TimeZone:
+  Enabled: true
+  Severity: error
+
+Rails/UniqBeforePluck:
+  Enabled: true
+  Severity: error
+
+Rails/UnknownEnv:
+  Enabled: true
+  Severity: error
+
+Rails/Validation:
+  Enabled: true
+  Severity: error
+
+Security/Eval:
+  Enabled: true
+  Severity: error
+
+Security/JSONLoad:
+  Enabled: true
+  Severity: error
+
+Security/MarshalLoad:
+  Enabled: true
+  Severity: error
+
+Security/Open:
+  Enabled: true
+  Severity: error
+
+Security/YAMLLoad:
+  Enabled: true
+  Severity: error
+
+Style/ArrayCoercion:
+  Enabled: true
+  Severity: error
+
+Style/OptionalBooleanParameter:
+  Enabled: true
+  Severity: warning
+
+Style/AccessModifierDeclarations:
+  Enabled: true
+  Severity: error
+
+Style/Alias:
+  Enabled: true
+  Severity: error
+
+Style/AndOr:
+  Enabled: true
+  Severity: error
+
+Style/ArrayJoin:
+  Enabled: true
+  Severity: error
+
+Style/Attr:
+  Enabled: true
+  Severity: error
+
+Style/AutoResourceCleanup:
+  Enabled: true
+  Severity: error
+
+Style/BarePercentLiterals:
+  Enabled: true
+  Severity: error
+
+Style/BlockDelimiters:
+  Enabled: true
+  Severity: error
+
+Style/CaseEquality:
+  Enabled: true
+  Severity: error
+
+Style/CharacterLiteral:
+  Enabled: true
+  Severity: error
+
+Style/ClassAndModuleChildren:
+  Enabled: true
+  Severity: error
+
+Style/ClassCheck:
+  Enabled: true
+  Severity: error
+
+Style/ClassMethods:
+  Enabled: true
+  Severity: error
+
+Style/ClassVars:
+  Enabled: true
+  Severity: error
+
+Style/CollectionMethods:
+  Enabled: true
+  Severity: error
+
+Style/ColonMethodCall:
+  Enabled: true
+  Severity: error
+
+Style/ColonMethodDefinition:
+  Enabled: true
+  Severity: error
+
+Style/CommandLiteral:
+  Enabled: true
+  Severity: error
+
+Style/ConditionalAssignment:
+  Enabled: true
+  Severity: error
+
+Style/DateTime:
+  Enabled: false
+
+Style/DefWithParentheses:
+  Enabled: true
+  Severity: error
+
+Style/Dir:
+  Enabled: true
+  Severity: error
+
+Style/DoubleNegation:
+  Enabled: true
+  Severity: error
+
+Style/EachForSimpleLoop:
+  Enabled: true
+  Severity: error
+
+Style/EachWithObject:
+  Enabled: true
+  Severity: error
+
+Style/EmptyBlockParameter:
+  Enabled: true
+  Severity: error
+
+Style/EmptyCaseCondition:
+  Enabled: true
+  Severity: error
+
+Style/EmptyElse:
+  Enabled: true
+  Severity: error
+
+Style/EmptyLambdaParameter:
+  Enabled: true
+  Severity: error
+
+Style/EmptyLiteral:
+  Enabled: true
+  Severity: error
+
+Style/EmptyMethod:
+  Enabled: true
+  Severity: error
+
+Style/EvalWithLocation:
+  Enabled: true
+  Severity: error
+
+Style/EvenOdd:
+  Enabled: true
+  Severity: error
+
+Style/ExpandPathArguments:
+  Enabled: true
+  Severity: error
+
+Style/For:
+  Enabled: true
+  Severity: error
+
+Style/FormatString:
+  Enabled: true
+  Severity: error
+
+Style/GlobalVars:
+  Enabled: true
+  Severity: error
+  AllowedVariables: ["$log"]
+
+
+Style/IdenticalConditionalBranches:
+  Enabled: true
+  Severity: error
+
+Style/IfInsideElse:
+  Enabled: true
+  Severity: error
+
+# to be reenabled once codeclimate releases 0.59 channel
+# Style/IfUnlessModifier:
+#   Enabled: true
+#   Severity: error
+
+Style/IfUnlessModifierOfIfUnless:
+  Enabled: true
+  Severity: error
+
+Style/IfWithSemicolon:
+  Enabled: true
+  Severity: error
+
+Style/ImplicitRuntimeError:
+  Enabled: true
+  Severity: error
+
+Style/InfiniteLoop:
+  Enabled: true
+  Severity: error
+
+Style/InlineComment:
+  Enabled: true
+  Severity: error
+
+Style/InverseMethods:
+  Enabled: true
+  Severity: error
+
+Style/Lambda:
+  Enabled: true
+  Severity: error
+
+Style/LambdaCall:
+  Enabled: true
+  Severity: error
+
+Style/LineEndConcatenation:
+  Enabled: true
+  Severity: error
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: true
+  Severity: error
+
+Style/MethodDefParentheses:
+  Enabled: true
+  Severity: error
+
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+  Severity: warning
+
+Style/RedundantRegexpEscape:
+  Enabled: true
+  Severity: warning
+
+Style/BisectedAttrAccessor:
+  Enabled: true
+  Severity: warning
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+  Severity: error
+
+Lint/ConstantResolution:
+  Enabled: false
+  Severity: warning
+
+Lint/DuplicateElsifCondition:
+  Enabled: true
+  Severity: error
+
+Lint/FloatComparison:
+  Enabled: true
+  Severity: error
+
+Lint/HashCompareByIdentity:
+  Enabled: true
+  Severity: error
+
+Style/SlicingWithRange:
+  Enabled: true
+  Severity: warning
+
+Style/ClassEqualityComparison:
+  Enabled: true
+  Severity: error
+
+Style/ExplicitBlockArgument:
+  Enabled: true
+  Severity: warning
+
+Style/StringConcatenation:
+  Enabled: true
+  Severity: warning
+
+Style/SingleArgumentDig:
+  Enabled: true
+  Severity: warning
+
+Lint/MissingSuper:
+  Enabled: true
+  Severity: error
+
+Style/MinMax:
+  Enabled: true
+  Severity: error
+
+Style/MissingRespondToMissing:
+  Enabled: true
+  Severity: error
+
+Style/MixinGrouping:
+  Enabled: true
+  Severity: error
+
+Style/MixinUsage:
+  Enabled: true
+  Severity: error
+
+Style/ModuleFunction:
+  Enabled: true
+  Severity: error
+
+Style/MultilineMemoization:
+  Enabled: true
+  Severity: error
+
+Style/MultipleComparison:
+  Enabled: true
+  Severity: error
+
+Style/MutableConstant:
+  Enabled: true
+  Severity: error
+
+Style/NegatedWhile:
+  Enabled: true
+  Severity: error
+
+Style/NestedParenthesizedCalls:
+  Enabled: true
+  Severity: error
+
+Style/NestedTernaryOperator:
+  Enabled: true
+  Severity: error
+
+Style/Next:
+  Enabled: true
+  Severity: error
+
+Style/NumericLiterals:
+  Enabled: true
+  Severity: error
+
+Style/NumericPredicate:
+  Enabled: true
+  Severity: error
+
+Style/OptionalArguments:
+  Enabled: true
+  Severity: error
+
+Style/OrAssignment:
+  Enabled: true
+  Severity: error
+
+Style/ParenthesesAroundCondition:
+  Enabled: true
+  Severity: error
+
+Style/PreferredHashMethods:
+  Enabled: true
+  Severity: error
+
+Style/Proc:
+  Enabled: true
+  Severity: error
+
+Style/RaiseArgs:
+  Enabled: true
+  Severity: error
+
+Style/RedundantBegin:
+  Enabled: true
+  Severity: error
+
+Style/RedundantException:
+  Enabled: true
+  Severity: error
+
+Lint/RedundantSafeNavigation:
+  Enabled: true
+  Severity: warning
+
+Style/RedundantFreeze:
+  Enabled: true
+  Severity: error
+
+Style/RedundantParentheses:
+  Enabled: true
+  Severity: error
+
+Style/RedundantReturn:
+  Enabled: true
+  Severity: error
+
+Style/RedundantSelf:
+  Enabled: true
+  Severity: error
+
+Style/RegexpLiteral:
+  Enabled: true
+  Severity: error
+
+Style/RescueModifier:
+  Enabled: true
+  Severity: error
+
+Style/ReturnNil:
+  Enabled: true
+  Severity: error
+
+Style/SafeNavigation:
+  Enabled: true
+  Severity: error
+
+Style/SelfAssignment:
+  Enabled: true
+  Severity: error
+
+Style/Send:
+  Enabled: true
+  Severity: error
+  Exclude:
+  - 'spec/**/*'
+
+Style/StabbyLambdaParentheses:
+  Enabled: true
+  Severity: error
+
+Style/StringHashKeys:
+  Enabled: true
+  Severity: error
+  Exclude:
+    - 'app/services/community/cmis_gateway.rb'
+    - 'config/environments/*.rb'
+    - 'spec/**/*'
+
+Style/StructInheritance:
+  Enabled: true
+  Severity: error
+
+Style/SymbolArray:
+  Enabled: true
+  Severity: error
+
+Style/SymbolLiteral:
+  Enabled: true
+  Severity: error
+
+Style/SymbolProc:
+  Enabled: true
+  Severity: error
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: true
+  Severity: error
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
+  Severity: error
+
+Style/RedundantCondition:
+  Enabled: true
+  Severity: error
+
+Style/RedundantInterpolation:
+  Enabled: true
+  Severity: error
+
+# Prefer x.nil? to x == nil.
+Style/NilComparison:
+  Enabled: true
+  Severity: error
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+  Severity: warning
+
+Layout/EmptyLineAfterMultilineCondition:
+  Enabled: true
+  Severity: warning
+
+Layout/DotPosition:
+  EnforcedStyle: leading
+
+# Checks the indentation of hanging closing parentheses.
+Layout/ClosingParenthesisIndentation:
+  Enabled: true
+  Severity: error
+
+Style/SoleNestedConditional:
+  Enabled: true
+  Severity: warning
+
+Style/KeywordParametersOrder:
+  Enabled: true
+  Severity: warning
+
+Style/CombinableLoops:
+  Enabled: true
+  Severity: warning
+
+Style/ClassMethodsDefinitions:
+  Enabled: true
+  Severity: warning
+  EnforcedStyle: self_class
+
+# Only use if/unless modifiers on single line statements.
+Style/MultilineIfModifier:
+  StyleGuide: '#no-multiline-if-modifiers'
+  Enabled: true
+  Severity: error
+
+# Use ! instead of not.
+Style/Not:
+  Enabled: true
+  Severity: error
+
+# Use 2 spaces for indentation.
+Layout/IndentationWidth:
+  Enabled: true
+  Severity: error
+
+# Use 2 spaces for indentation in an array, relative to the first position after the preceding left parenthesis.
+Layout/FirstArrayElementIndentation:
+  Enabled: true
+  Severity: error
+
+Style/NegatedUnless:
+  Enabled: true
+  Severity: error
+
+Style/FloatDivision:
+  Enabled: true
+  Severity: error
+
+Layout/FirstArgumentIndentation:
+  Enabled: true
+  Severity: error
+
+Layout/SpaceInsideBlockBraces:
+  Enabled: true
+  Severity: error
+
+# Line is too long. [120]
+Layout/LineLength:
+  Enabled: true
+  Severity: error
+  Max: 120
+
+# Checks indentation of method calls with the dot operator
+# that span more than one line.
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  Severity: error
+  EnforcedStyle: indented_relative_to_receiver
+
+# Use `{ a: 1 }` not `{a:1}`.
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
+  Severity: error
+
+# Don't use several empty lines in a row
+Layout/EmptyLines:
+  Enabled: true
+  Severity: error
+# Use empty lines between defs.
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+  Severity: error
+
+Layout/SpaceAfterComma:
+  Enabled: true
+  Severity: error
+
+# Checks trailing blank lines and final newline.
+Layout/TrailingEmptyLines:
+  Enabled: true
+  Severity: error
+
+Layout/HashAlignment:
+  Enabled: true
+  Severity: error
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Layout/ArrayAlignment:
+  Enabled: true
+  Severity: error
+
+Layout/ParameterAlignment:
+  Enabled: true
+  Severity: error
+
+Layout/FirstHashElementIndentation:
+  Enabled: true
+  Severity: error
+
+Layout/IndentationConsistency:
+  Description: 'Keep indentation straight.'
+  StyleGuide: '#spaces-indentation'
+  Enabled: true
+  Severity: error
+  # to be reenabled once codeclimate releases support for 0.59
+#   EnforcedStyle: rails
+
+# Check for conditionals that can be replaced with guard clauses
+Style/GuardClause:
+  Enabled: true
+  Severity: error
+  Exclude:
+    - 'app/models/draft_document.rb'
+
+# Don't use semicolons to terminate expressions.
+Style/Semicolon:
+  Enabled: true
+  Severity: error
+
+# Checks for incorrect grammar when using methods like `3.day.ago`
+Rails/PluralizationGrammar:
+  Enabled: true
+  Severity: error
+
+# Checks that the closing brace in a method call is
+# either on the same line as the last method argument, or
+# a new line.
+Layout/MultilineMethodCallBraceLayout:
+  Enabled: true
+  Severity: error
+
+# Checks that the closing brace in an array literal is
+# either on the same line as the last array element, or
+# a new line.
+Layout/MultilineArrayBraceLayout:
+  Enabled: true
+  Severity: error
+
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: true
+  Severity: error
+
+# Don't return true/false from a conditional
+Style/RedundantConditional:
+  Enabled: true
+  Severity: error
+
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+  - single_quotes
+  - double_quotes

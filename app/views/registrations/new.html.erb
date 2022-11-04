@@ -1,0 +1,31 @@
+<h2 class="text-uppercase text-center mb-5">Create an account</h2>
+<%= form_with model: @user, url: sign_up_path do |f| %>
+  <% if @user.errors.any? %>
+      <div class="alert alert-danger">
+          <% @user.errors.full_messages.each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+      </div>
+    <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class: "form-control", placeholder: "example@example.com" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+    <br>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Create User" %>
+  </div>
+<% end %>
+<p>Do you already have an account?</p>
+<%= link_to '<button type="button">Log in</button>'.html_safe, log_in_path %>
